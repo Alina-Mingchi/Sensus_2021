@@ -1,0 +1,36 @@
+GUI: 
+main.py (actually in a folder 1 level higher than the rest of the files):   
+		Need to run this to see the drawing of the gui
+
+_init_.py: calling the gui 
+
+layers.py: specify the parameter values used for the buttons
+	   specify the construction of each layer 
+	   e.g. change background color here in line 10
+	   e.g. change the content of each page
+
+\gui\base.py: draggable, clickable classes (Probably no need to modify anything here)
+
+\gui\_init_.py: there is this pygame.display.set_mode((800,400),flags)
+		we need to change it if we want it vertical, currently trying with (400,800)
+		To change the size of the screen: change line 20 return[x,y] & change line 40
+						  Be careful of the if fullscreen (line37 and line 38)
+
+Right now the resolution of the screen is set to be 400x600
+
+
+
+	   
+!!! Need to be careful with importing functions from child directory, currently the directory is set to be application, e.g. application.gui, application.gui.base
+
+!!! For the usermanual or any page that we want to have several paragraphs of text, it might be easier to save as png. The current issue is that gui.Text seems to be overwritten previous gui.Text.
+
+Done:   screen0 & screen1 & user manual The framework is done
+	In the above three pages, tested that it is possible to put text, image, buttons
+	Create a new class successfully.
+		(step1: add a class, step2: in _init_.py, add it around line 34~49)
+
+TODO:   1) make the design prettier
+	2) finish other pages
+
+???: If there are two back_buttons, only seems to see the one on the left, if we want to keep the vertical design, the size of the back buttons might need to be changed.
